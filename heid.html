@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Heide — Museum of Modern Art (Replica)</title>
+  <style>
+    /* Simple, modern styling inspired by heide.com.au */
+    :root{
+      --accent:#1b1b1b;
+      --muted:#6b6b6b;
+      --gap:18px;
+      --max:1100px;
+      font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;color:#111;line-height:1.45}
+    .topbar{background:#f6f6f6;padding:8px 16px;font-size:14px;text-align:center}
+    header{display:flex;align-items:center;justify-content:space-between;padding:20px 16px;max-width:var(--max);margin:0 auto}
+    .brand{font-weight:700;letter-spacing:1px}
+    nav ul{list-style:none;margin:0;padding:0;display:flex;gap:20px}
+    nav a{text-decoration:none;color:var(--accent);font-weight:600}
+    .container{max-width:var(--max);margin:24px auto;padding:0 16px}
+
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1fr 320px;gap:24px;align-items:start}
+    .hero-visual{background:linear-gradient(180deg,#eee,#ddd);min-height:360px;border-radius:8px;display:flex;align-items:flex-end;padding:24px;color:#fff;background-image:url('https://images.unsplash.com/photo-1504198453319-5ce911bafcde?q=80&w=1600&auto=format&fit=crop');background-size:cover;background-position:center}
+    .hero-visual h1{margin:0;background:rgba(0,0,0,.45);padding:12px;border-radius:4px}
+    .sidebar{background:#fff;border:1px solid #e9e9e9;padding:16px;border-radius:8px}
+    .price{font-size:18px;font-weight:700}
+    .cta{display:inline-block;margin-top:12px;padding:10px 14px;border-radius:6px;background:var(--accent);color:white;text-decoration:none}
+
+    /* Grid sections */
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:28px}
+    .card{background:#fff;padding:14px;border-radius:6px;border:1px solid #eee}
+    .card h3{margin:0 0 8px 0}
+
+    /* Newsletter / actions */
+    .actions{display:flex;gap:12px;margin-top:20px}
+    .btn{padding:10px 12px;border-radius:6px;border:1px solid #ddd;background:#fafafa}
+
+    footer{margin-top:40px;padding:28px 16px;background:#f8f8f8}
+    .foot-inner{max-width:var(--max);margin:0 auto;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+    .small{font-size:13px;color:var(--muted)}
+
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr}
+      .hero-visual{min-height:260px}
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">The North East Link Tunnel may affect your journey to Heide — plan ahead.</div>
+  <header>
+    <div class="brand">HEIDE</div>
+    <nav>
+      <ul>
+        <li><a href="#whats-on">What's On</a></li>
+        <li><a href="#visit">Visit</a></li>
+        <li><a href="#explore">Explore</a></li>
+        <li><a href="#learn">Learn</a></li>
+        <li><a href="#support">Support</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-visual">
+        <div>
+          <h1>Heide — Museum of Modern Art</h1>
+          <p class="small">A public art museum and sculpture park on the Birrarung / Yarra River. Open Tues–Sun.</p>
+        </div>
+      </div>
+
+      <aside class="sidebar">
+        <div class="price">Admission</div>
+        <p class="small">Adult — $27<br/>Concession — $22<br/>Children under 16 — Free</p>
+        <a class="cta" href="#book">Book Tickets</a>
+
+        <hr style="margin:14px 0;border:none;border-top:1px solid #f0f0f0" />
+        <div>
+          <strong>Opening hours</strong>
+          <p class="small">Tue–Fri 10am–4pm<br/>Sat–Sun 10am–5pm</p>
+        </div>
+
+        <div style="margin-top:12px">
+          <a class="btn" href="#membership">Become a member</a>
+          <a class="btn" href="#donate">Donate</a>
+        </div>
+      </aside>
+    </section>
+
+    <section id="whats-on" style="margin-top:30px">
+      <h2>What's On</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>Exhibition — Photography Protégés</h3>
+          <p class="small">Enter your surrealist inspired photograph for the chance to win.</p>
+          <a href="#" class="small">Find out more →</a>
+        </article>
+        <article class="card">
+          <h3>Architecture Tour</h3>
+          <p class="small">Guided tours of the Heide buildings and grounds.</p>
+        </article>
+        <article class="card">
+          <h3>Family Workshop</h3>
+          <p class="small">Drop-in art activities for kids and families.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="explore" style="margin-top:28px">
+      <h2>Explore</h2>
+      <div class="grid">
+        <div class="card"><h3>Art</h3><p class="small">Collections, exhibitions and commissions.</p></div>
+        <div class="card"><h3>Architecture</h3><p class="small">Built heritage of the Heide property.</p></div>
+        <div class="card"><h3>Landscape</h3><p class="small">Gardens & Sculpture Park.</p></div>
+      </div>
+    </section>
+
+    <section id="newsletter" style="margin-top:28px;display:flex;gap:18px;align-items:center;flex-wrap:wrap">
+      <div style="flex:1;min-width:260px">
+        <h3>Sign up to our mailing list</h3>
+        <p class="small">Receive updates on exhibitions, programs and events.</p>
+      </div>
+      <form style="display:flex;gap:8px;flex:1;min-width:260px;" onsubmit="event.preventDefault();alert('Thanks — this is a static demo.');">
+        <input aria-label="email" placeholder="your email" style="flex:1;padding:10px;border-radius:6px;border:1px solid #ddd" />
+        <button class="cta">Subscribe</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <div class="foot-inner">
+      <div>
+        <div class="brand">HEIDE</div>
+        <div class="small" style="margin-top:6px">Heide Museum of Modern Art acknowledges the Wurundjeri people of the Kulin Nation.</div>
+      </div>
+      <div class="small">© 2025 Heide Museum of Modern Art — This is a static replica for learning purposes.</div>
+    </div>
+  </footer>
+
+</body>
+</html>

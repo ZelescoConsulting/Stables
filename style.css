@@ -1,0 +1,802 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* GLOBAL STYLES */
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    line-height: 1.6;
+    background: #fafafa;
+    color: #333;
+}
+
+h1, h2, h3 {
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.section {
+    padding: 4rem 1.5rem;
+    max-width: 1100px;
+    margin: auto;
+    text-align: center;
+}
+
+.btn {
+    background: #111;
+    color: #fff;
+    padding: 0.7rem 1.5rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    background: #444;
+}
+
+/* HEADER */
+header {
+    position: relative;
+    width: 100%;
+    height: auto;
+    min-height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 20px;
+    text-align: center;
+    background: url("pictures/stable.jpeg") no-repeat center center/cover;
+    overflow: hidden;
+}
+
+/* NAVBAR */
+header nav {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    align-items: center;
+    z-index: 2;
+}
+
+header nav .logo {
+    height: 30px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+/* HERO TEXT */
+.title-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    z-index: 2;
+    position: relative;
+}
+
+.title-image {
+    max-width: 1000px;
+    width: 80%;
+    height: auto;
+}
+
+.title-container p {
+    font-size: 1.2rem;
+    color: #fff;
+    font-weight: 500;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.5);
+}
+
+/* RESPONSIVE HERO TEXT */
+@media (max-width: 700px) {
+    .title-image {
+        max-width: 200px;
+    }
+    .title-container p {
+        font-size: 1rem;
+    }
+}
+
+/* ABOUT SECTION */
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-text {
+    flex: 1;
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    text-align: left;
+}
+
+.about-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #222;
+    font-family: 'Playfair Display', serif;
+}
+
+.about-text p {
+    margin-bottom: 18px;
+    line-height: 1.7;
+    color: #444;
+    font-size: 1.05rem;
+}
+
+.about-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 380px;
+    border-radius: 18px;
+    border: 4px solid #fff;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease;
+
+}
+
+/* AUTHOR IMAGE HOVER EFFECT */
+.about-image img:hover {
+    transform: scale(1.05);
+    border-color: #f0a500;        /* gold border */
+    box-shadow: 0 0 20px #f0a500, 0 8px 20px rgba(0,0,0,0.15); /* golden glow */
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+/* GRID & CARDS */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.card {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* SERVICES */
+#services {
+    height: 50vh;
+    background-image: url('pictures/womenpower.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.right-section {
+    height: 300px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-bottom: 350px;
+    padding-left: 500px;
+}
+
+.right-text {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 40px;
+    color: #fcfbf4;
+}
+
+/* EXPLORE SECTION */
+.explore {
+    background: #fff7f3;
+    padding: 4rem 2rem;
+    width: 100%;
+    margin: 0;
+    box-shadow: none;
+    border-radius: 0;
+}
+
+/* Explore & Testimonials Headings */
+.explore h2,
+.testimonials h2 {
+    font-size: 2.8rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #111;
+}
+
+/* TAB BUTTONS (Explore Section) */
+.tab-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
+
+.tab-btn {
+    background: #c89b7b;
+    border: none;
+    padding: 1rem 2rem;      /* bigger buttons */
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1.2rem;       /* larger text */
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.tab-btn:hover {
+    background: #a57354;
+}
+
+.tab-btn.active {
+    background: #111;
+}
+
+.tab-content {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.tab-pane {
+    display: none;
+    animation: fadeIn 0.6s ease;
+}
+
+.tab-pane.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* TESTIMONIALS */
+.testimonials {
+    background: #f1f1f1;
+    width: 100%;
+    padding: 4rem 2rem;
+    margin: 0;
+}
+
+.testimonials .grid {
+    margin-top: 2rem;
+}
+
+/* EXPLORE GALLERY SLIDER */
+.gallery {
+    background: #fdfdfd;
+    padding: 3rem 1.5rem;
+}
+
+.slider {
+    position: relative;
+    max-width: 900px;
+    margin: 2rem auto;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.8s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    text-align: center;
+    position: relative;
+}
+
+.slide img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 12px 12px 0 0;
+}
+
+.caption {
+    background: rgba(0,0,0,0.6);
+    color: #fff;
+    padding: 10px;
+    font-size: 1.2rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 0 0 12px 12px;
+}
+
+.dots {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.dots button {
+    width: 12px;
+    height: 12px;
+    margin: 0 6px;
+    border-radius: 50%;
+    border: none;
+    background: #ccc;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.dots button.active {
+    background: #c89b7b;
+}
+
+/* FOOTER */
+footer {
+    background-color: #222;
+    color: #fff;
+    padding: 30px 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.footer-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    position: relative;
+}
+
+.footer-content {
+    text-align: center;
+}
+
+.social-icons a {
+    color: #fff;
+    margin: 0 10px;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #f0a500;
+}
+
+.horse-icon {
+    font-size: 2rem;
+    color: #fff;
+}
+
+.corner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.corner-decor {
+    width: 40px;
+    height: 40px;
+    border: 2px solid #f0a500;
+    border-radius: 50%;
+    margin-top: 5px;
+}
+
+.left-corner .corner-decor {
+    transform: rotate(-15deg);
+}
+
+.right-corner .corner-decor {
+    transform: rotate(15deg);
+}
+
+/* BOOKING / CONTACT FORM */
+.booking-form form {
+    max-width: 700px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: left;
+}
+
+.booking-form label {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.booking-form input,
+.booking-form textarea {
+    width: 100%;
+    padding: 0.9rem 1rem;      /* bigger input fields */
+    font-size: 1.1rem;         /* larger text */
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    outline: none;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.booking-form input:focus,
+.booking-form textarea:focus {
+    border-color: #c89b7b;
+    box-shadow: 0 0 6px rgba(200, 155, 123, 0.5);
+}
+
+.booking-form button {
+    padding: 1rem 2rem;       /* bigger button */
+    font-size: 1.2rem;        /* larger text */
+    border-radius: 8px;
+    cursor: pointer;
+    background: #111;
+    color: #fff;
+    border: none;
+    transition: background 0.3s ease;
+}
+
+.booking-form button:hover {
+    background: #444;
+}
+
+/*footer*/
+.footer-links {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #ccc;
+  }
+  
+  .footer-links a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-links a:hover {
+    color: #fff;
+  }
+  
+  .footer-links span {
+    margin: 0 8px;
+    color: #888;
+  }
+  
+
+/* EXPLORE GALLERY SECTION */
+.gallery {
+    width: 100%;
+    background: #f7d1d8;
+    text-align: center;
+    padding: 80px 0;
+  }
+  
+  .gallery h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    font-weight: 600;
+    color: #222;
+  }
+  
+  /* Make the slider fill most of the screen */
+  .slider {
+    position: relative;
+    width: 100%;
+    max-width: 1400px;
+    height: 600px; /* Increase this for larger images */
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .slides {
+    display: flex;
+    transition: transform 0.8s ease-in-out;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .slide {
+    min-width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  
+  .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* makes the image fill fully without distortion */
+    transition: transform 1s ease;
+  }
+  
+  .slide img:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Caption Overlay */
+  .caption {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+  }
+  
+  /* Dots (pagination) */
+  .dots {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+  }
+  
+  .dots span {
+    width: 12px;
+    height: 12px;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .dots span.active {
+    background: #fff;
+    transform: scale(1.2);
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .slider {
+      height: 400px;
+    }
+  
+    .caption {
+      font-size: 0.9rem;
+      bottom: 20px;
+    }
+  }
+  
+  @media (min-width: 1600px) {
+    .slider {
+      height: 700px; /* For large screens */
+    }
+  }
+
+  /* AUTHOR / LUCIA SECTION */
+.lucia-about {
+    background: #f8f8f8;
+    padding: 100px 0;
+    text-align: center;
+  }
+  
+  .about-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px; /* more space between text and image */
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+  }
+  
+  /* TEXT STYLING */
+  .about-text {
+    flex: 1;
+    min-width: 350px;
+    text-align: left;
+  }
+  
+  .about-text h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: #222;
+  }
+  
+  .about-text p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #444;
+    margin-bottom: 18px;
+  }
+  
+  /* IMAGE STYLING */
+  .about-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .about-image img {
+    width: 420px; /* bigger image */
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+  }
+  
+  .about-image img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Responsive tweaks */
+  @media (max-width: 992px) {
+    .about-container {
+      flex-direction: column;
+      text-align: center;
+      gap: 50px;
+    }
+  
+    .about-text {
+      text-align: center;
+    }
+  
+    .about-text h2 {
+      font-size: 2rem;
+    }
+  
+    .about-text p {
+      font-size: 1.05rem;
+    }
+  
+    .about-image img {
+      width: 320px;
+    }
+  }
+  
+/* CLEAN EVENTS & EXPERIENCES SECTION */
+/* ============================
+   FULL-WIDTH EVENTS SECTION
+   CLEAN VERSION
+============================ */
+
+.event-showcase {
+  background: #d9bbbb;          /* grey background */
+  padding: 100px 0;
+  text-align: center;
+  position: relative;
+
+  /* FORCE FULL WIDTH */
+  width: 100vw;
+  max-width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+}
+
+/* Title */
+.event-showcase h2 {
+  font-size: 3rem;
+  margin-bottom: 60px;
+  color: #d12c70;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* Event row layout */
+.event-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  margin: 100px auto;
+  max-width: 1200px;
+  flex-wrap: wrap;
+}
+
+/* Reverse row layout */
+.event-row.reverse {
+  flex-direction: row-reverse;
+}
+
+/* Image container */
+.event-image {
+  flex: 1;
+  max-width: 500px;
+}
+
+.event-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+  transition: transform 0.6s ease, box-shadow 0.6s ease;
+}
+
+/* tilt effects removed for clean look */
+.event-image img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 14px 40px rgba(0,0,0,0.35);
+}
+
+/* Text block */
+.event-text {
+  flex: 1;
+  text-align: left;
+  padding: 20px;
+}
+
+/* Clean heading style */
+.event-text h3 {
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: #d12c70;
+  margin-bottom: 15px;
+}
+
+/* Paragraph */
+.event-text p {
+  font-size: 1.15rem;
+  color: #444;
+  line-height: 1.7;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .event-showcase {
+      width: 100%;
+      margin: 0;
+  }
+
+  .event-row {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .event-text {
+      text-align: center;
+      padding: 0 20px;
+  }
+
+  .event-image img {
+      transform: none;
+  }
+}

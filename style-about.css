@@ -1,0 +1,419 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body.about-page {
+    font-family: 'Georgia', serif;
+    color: #1a1a1a;
+    background: #fff;
+    line-height: 1.6;
+  }
+  
+  /* NAVBAR / HERO */
+  .hero {
+    position: relative;
+    color: #fff;
+    text-align: center;
+    background: url("pictures/womenpower.jpg") center/cover no-repeat;
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 1;
+  }
+  
+  .navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+  }
+  
+  .logo {
+    font-style: italic;
+    font-size: 1.2rem;
+    color: #fff;
+  }
+  
+  .btn {
+    background: #fff;
+    color: #0d2d23;
+    padding: 8px 18px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    transition: background 0.3s;
+    text-decoration: none;
+  }
+  
+  .btn:hover {
+    background: #ddd;
+  }
+  
+  .hero-text {
+    position: relative;
+    z-index: 2;
+    padding: 0 20px;
+    max-width: 900px;
+    margin: auto;
+  }
+  
+  .hero-text .intro {
+    font-style: italic;
+    text-transform: lowercase;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+  }
+  
+  .hero-text h2 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+  }
+  
+  .hero-text .sub {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #f1f1f1;
+  }
+  
+  /* ABOUT */
+  .about {
+    padding: 80px 20px;
+    text-align: center;
+    background: #f4f1d6;   /* <- changed to red */
+    color: #fff;   
+  }
+  
+  .about h3 {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #777;
+    margin-bottom: 25px;
+  }
+  
+  .about .lead {
+    font-size: 1.8rem;
+    font-weight: bold;
+    max-width: 700px;
+    margin: 0 auto 50px;
+    line-height: 1.4;
+    color: #000;
+  }
+  
+  .about-grid {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  
+  .about-grid img {
+    width: 100%;
+    max-width: 350px;
+    border-radius: 6px;
+  }
+  
+  .about-text {
+    max-width: 400px;
+    text-align: left;
+  }
+  
+  .about-text h4 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: #000;
+  }
+  
+  .about-text p {
+    margin-bottom: 20px;
+    color: #444;
+  }
+  
+  .about-text .link {
+    font-weight: bold;
+    border-bottom: 2px solid #000;
+    text-decoration: none;
+    color: #000;
+  }
+  
+  .about-text .link:hover {
+    color: #0d2d23;
+    border-color: #0d2d23;
+  }
+  
+  /* ACHIEVEMENTS */
+  .achievement {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    padding: 80px 20px;
+    background: #fafafa;
+  }
+  
+  .achievement-card {
+    max-width: 500px;
+  }
+  
+  .achievement-card h4 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+  }
+  
+  .achievement-card p {
+    margin-bottom: 20px;
+    color: #555;
+  }
+  
+  .achievement-card ul {
+    list-style: none;
+  }
+  
+  .achievement-card li {
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+  }
+  
+  .achievement-card li span {
+    float: right;
+    font-size: 0.8rem;
+    color: #999;
+  }
+  
+  .achievement img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 6px;
+  }
+  
+  /* MISSION */
+  .mission {
+    position: relative;
+    text-align: center;
+    color: #0d2d23;
+  }
+  
+  .mission img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .mission-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 40px;
+    border-radius: 6px;
+    max-width: 500px;
+    width: 90%;
+  }
+  
+  .mission-content h4 {
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+  }
+  
+  .mission-content p {
+    font-size: 1.6rem;
+    font-style: italic;
+    margin-bottom: 20px;
+  }
+  
+  .mission-content .link {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #0d2d23;
+    color: #fff;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .mission-content .link:hover {
+    background: #13382a;
+  }
+  
+  /* TESTIMONIALS */
+  .testimonials {
+    padding: 80px 20px;
+    text-align: center;
+  }
+  
+  .testimonials h3 {
+    font-size: 1.8rem;
+    margin-bottom: 50px;
+  }
+  
+  .testimonial-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  
+  .testimonial {
+    background: #fff;
+    border: 1px solid #eee;
+    padding: 20px;
+    max-width: 280px;
+    border-radius: 6px;
+    text-align: center;
+  }
+  
+  /* Make testimonial images small circular icons */
+  .testimonial img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+  }
+  
+  .testimonial p {
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+    color: #555;
+  }
+  
+  .testimonial h5 {
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .testimonial span {
+    font-size: 0.8rem;
+    color: #888;
+  }
+  
+  /* FOOTER */
+  footer {
+    background: #f8f8f8;
+    padding: 60px 20px;
+    color: #333;
+    font-size: 0.9rem;
+  }
+  
+  .footer-content {
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+  }
+  
+  .footer-content h2 {
+    font-style: italic;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    color: #0d2d23;
+  }
+  
+  .footer-content p {
+    margin-bottom: 30px;
+    color: #666;
+  }
+  
+  .footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    text-align: left;
+  }
+  
+  .footer-links h4 {
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+  }
+  
+  .footer-links ul {
+    list-style: none;
+  }
+  
+  .footer-links li {
+    margin-bottom: 8px;
+  }
+  
+  .footer-links a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .footer-links a:hover {
+    color: #0d2d23;
+  }
+  
+  .footer-content form {
+    margin-top: 10px;
+    display: flex;
+    gap: 8px;
+  }
+  
+  .footer-content input[type="email"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    flex: 1;
+  }
+  
+  .footer-content button {
+    background: #0d2d23;
+    color: #fff;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .footer-content button:hover {
+    background: #13382a;
+  }
+  
+  .copy {
+    margin-top: 40px;
+    font-size: 0.8rem;
+    color: #888;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .about-grid,
+    .achievement {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .about-text {
+      text-align: center;
+    }
+  
+    .mission-content {
+      padding: 20px;
+    }
+  
+    .footer-links {
+      flex-direction: column;
+      text-align: center;
+    }
+  }

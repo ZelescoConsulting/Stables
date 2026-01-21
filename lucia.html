@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lucia Zelesco - Author</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <style>
+    /* General reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #fffaf0; /* soft cream background */
+      color: #333;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* HEADER */
+    header {
+      width: 100%;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #ffffffcc; /* semi-transparent white */
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(5px);
+    }
+
+    header .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #b8860b; /* gold accent */
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 30px;
+    }
+
+    nav ul li a {
+      font-weight: 500;
+      padding: 6px 10px;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      background-color: gold;
+      color: #000;
+    }
+
+    /* HERO SECTION */
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 100px 20px 60px 20px;
+      background: linear-gradient(to bottom, #fffaf0, #fff2e6);
+    }
+
+    .hero img {
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      border: 5px solid gold;
+      object-fit: cover;
+      transition: transform 0.3s, box-shadow 0.3s;
+      cursor: pointer;
+    }
+
+    .hero img:hover {
+      transform: scale(1.08);
+      box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+    }
+
+    .hero h1 {
+      margin-top: 20px;
+      font-size: 2.8rem;
+      color: #b8860b;
+    }
+
+    .hero p {
+      margin-top: 15px;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      max-width: 700px;
+    }
+
+    /* ABOUT / BIO SECTION */
+    .bio {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+      padding: 60px 20px;
+      background-color: #fff8f0;
+    }
+
+    .bio-text {
+      flex: 1 1 400px;
+      max-width: 600px;
+    }
+
+    .bio-text h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #b8860b;
+    }
+
+    .bio-text p {
+      font-size: 1rem;
+      line-height: 1.7;
+      margin-bottom: 15px;
+    }
+
+    .bio-image {
+      flex: 1 1 300px;
+      text-align: center;
+    }
+
+    .bio-image img {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 12px;
+      border: 4px solid gold;
+      transition: transform 0.3s, box-shadow 0.3s;
+      cursor: pointer;
+    }
+
+    .bio-image img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+    }
+
+    /* FEATURE / HIGHLIGHTS SECTION */
+    .highlights {
+      background-color: #fffaf0;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .highlights h2 {
+      font-size: 2rem;
+      color: #b8860b;
+      margin-bottom: 40px;
+    }
+
+    .highlights .cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .highlights .card {
+      flex: 1 1 250px;
+      background: #fff;
+      border-radius: 12px;
+      padding: 25px 20px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+    }
+
+    .highlights .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+    }
+
+    .highlights .card h3 {
+      color: #b8860b;
+      margin-bottom: 15px;
+    }
+
+    .highlights .card p {
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    /* SPEAKING SECTION */
+    .speaking {
+      background: #fff8f0;
+      padding: 70px 20px;
+    }
+    .speaking-content {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 40px;
+      justify-content: center;
+    }
+    .speaking-text {
+      flex: 1 1 400px;
+      max-width: 500px;
+    }
+    .speaking-text h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #b8860b;
+    }
+    .speaking-text p {
+      font-size: 1rem;
+      line-height: 1.7;
+    }
+    .speaking-image {
+      flex: 1 1 450px;
+      text-align: center;
+    }
+    .speaking-image img {
+      width: 100%;
+      max-width: 550px; /* increased image size */
+      border-radius: 12px;
+      border: 4px solid gold;
+      transition: transform 0.3s, box-shadow 0.3s;
+      cursor: pointer;
+    }
+    .speaking-image img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+    }
+
+    /* STABLES SECTION */
+    .stables {
+      background: linear-gradient(to bottom, #fffaf0, #fff2e6);
+      padding: 70px 20px;
+      text-align: center;
+    }
+    .stables h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #b8860b;
+    }
+    .stables-intro {
+      font-size: 1rem;
+      max-width: 700px;
+      margin: 0 auto 40px auto;
+      line-height: 1.7;
+    }
+    .stables-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+    }
+    .stables-gallery img {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 12px;
+      border: 3px solid gold;
+      transition: transform 0.3s, box-shadow 0.3s;
+      cursor: pointer;
+    }
+    .stables-gallery img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+    }
+
+    /* FOOTER */
+    footer {
+      padding: 30px 20px;
+      background-color: #fff;
+      text-align: center;
+      border-top: 2px solid gold;
+      font-weight: 500;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero, .bio {
+        flex-direction: column;
+      }
+      .speaking-content {
+        flex-direction: column;
+        text-align: center;
+      }
+      nav ul {
+        gap: 15px;
+      }
+      .speaking-image img {
+        max-width: 100%; /* stays responsive */
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo">Lucia Zelesco</div>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Bio</a></li>
+        <li><a href="#">Workshops</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <img src="pictures/luciaicon.jpg" alt="Lucia Zelesco" class="clickable-image">
+    <h1>Lucia Zelesco</h1>
+    <p>Author & Consultant blending storytelling, creativity, and empowerment. Explore her journey through literature, fashion, and innovative projects.</p>
+  </section>
+
+  <!-- BIO -->
+  <section class="bio">
+    <div class="bio-text">
+      <h2>About Lucia</h2>
+      <p>Lucia Zelesco is passionate about helping individuals and brands express themselves creatively. Through consulting and writing, she combines style with substance to inspire confidence and innovation.</p>
+      <p>Outside of her work, Lucia enjoys art, travel, and connecting with communities that share her passion for beauty and personal expression.</p>
+    </div>
+    <div class="bio-image">
+      <a href="lucia.html">
+        <img src="pictures/lucia.jpeg" alt="Lucia Zelesco">
+      </a>
+    </div>
+  </section>
+
+  <!-- HIGHLIGHTS -->
+  <section class="highlights">
+    <h2>My Story</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Women Empowerment</h3>
+        <p>For the Women of the Community</p>
+      </div>
+      <div class="card">
+        <h3>Consultation</h3>
+        <p>Learn to merge personal style with professional presence.</p>
+      </div>
+      <div class="card">
+        <h3>Revolutionizing digital brand</h3>
+        <p>Explore Lucia’s works on creativity and self-expression.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SPEAKING SECTION -->
+  <section class="speaking">
+    <div class="speaking-content">
+      <div class="speaking-text">
+        <h2>Our Voice</h2>
+        <p>
+          Lucia brings energy, creativity, and empowerment to every stage. 
+          Whether guiding women’s workshops or consulting with professionals, 
+          her voice inspires confidence and transformation.
+        </p>
+      </div>
+      <div class="speaking-image">
+        <img src="pictures/lucia-speaking.jpeg" alt="Lucia Zelesco Speaking">
+      </div>
+    </div>
+  </section>
+
+  <!-- STABLES VENUE SECTION -->
+  <section class="stables">
+    <h2>The Stables Experience</h2>
+    <p class="stables-intro">
+      Nestled in a serene environment, the Stables is where creativity meets community. 
+      A space designed for inspiration, reflection, and collaboration. 
+    </p>
+    <div class="stables-gallery">
+      <img src="pictures/stables1.jpeg" alt="Stables Area 1">
+      <img src="pictures/stables2.jpeg" alt="Stables Area 2">
+      <img src="pictures/luciaandhorse.jpeg" alt="Stables Area 3">
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    &copy; 2025 Lucia Zelesco | All Rights Reserved
+  </footer>
+
+</body>
+</html>
